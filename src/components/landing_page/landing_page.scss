@@ -119,7 +119,7 @@ div{
         top: 12rem;
 
         @include mobile {
-            top: 5rem;
+            top: 5.5rem;
         }
 
         @media screen and (min-width: $break-tablet) {
