@@ -10,25 +10,20 @@ div{
         margin-bottom: 10%;
     }
 
-    // .welcome-header{
-    //     padding-top: 20%;
-    //     height: 200px;
-    // }
-
     @include mobile{
         .welcome-header{
             position: relative;
-            top: 4rem;
+            top: 3rem;
         }
     }
 
     @media screen and (min-width: $break-tablet) {
         .welcome-header{
             position: relative;
-            top: 3rem; 
+            top: 6rem; 
 
             .welcome-logo {
-                max-width: 38%;
+                max-width: 22%;
             }
         }
     }
@@ -54,7 +49,6 @@ div{
 .landing-container {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(../../../public/dist/assets/images/bballwallpaper.jpg);
     background-attachment: fixed;
-    // background-color: #FEFBEA;
     background-size: cover;
     background-position-x: 50%;
 
@@ -80,12 +74,12 @@ div{
         font-size: 3rem;
 
         @include mobile {
-            top: 6rem;
+            top: 4.5rem;
             font-size: 2rem;
         }
 
         @media screen and (min-width: $break-tablet) {
-            top: 5rem;
+            top: 7rem;
             font-size: 2rem;
         }
 
@@ -95,12 +89,37 @@ div{
         }
     }
 
+    hr {
+        display: block;
+        overflow: hidden;
+        border-style: inset;
+        border-width: 1px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.5;
+        position: relative;
+        top: 4rem;
+
+        @media screen and (min-width: $break-tablet) {
+            display: none;
+        }
+    }
+
+    .first-hr {
+        top: 5rem;
+
+        @media screen and (min-width: $break-tablet) {
+            display: none;
+        }
+    }
+
     .landing-buttons {
         position: relative;
         top: 12rem;
 
         @include mobile {
-            top: 7rem;
+            top: 5rem;
         }
 
         @media screen and (min-width: $break-tablet) {
@@ -109,6 +128,26 @@ div{
 
         .signup-buttons {
             margin-bottom: 3rem;
+
+            @include mobile {
+                margin-bottom: 1rem;
+            }
+
+            @media only screen and (min-width: 601px) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .login-buttons {
+            margin-bottom: 3rem;
+
+            @include mobile {
+                margin-bottom: 1rem;
+            }
+
+            @media only screen and (min-width: 601px) {
+                margin-bottom: 2rem;
+            }
         }
 
         .guest-container {
@@ -121,7 +160,11 @@ div{
     color: white;
     border-radius: 200px;
     background-color: rgb(207, 109, 24);
+    margin-left: 37.666667%;
 
+    @include mobile {
+        margin-left: 30.666667%;
+    }
 }
 
 #landing-btn{
@@ -139,4 +182,15 @@ div{
     border-radius: 200px;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #ef6c00;
+    margin-left: 37.666667%;
+
+    @include mobile {
+        margin-left: 30.666667%;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .row .col.offset-m5 {
+        margin-left: 37.666667%;
+    }
 }
