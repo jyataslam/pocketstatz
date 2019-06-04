@@ -51,7 +51,8 @@ div{
     background-attachment: fixed;
     background-size: cover;
     background-position-x: 50%;
-    height: calc(100% - 64px);
+    height: 100%;
+    // height: calc(100% - 64px);
     // @include mobile {
     //     height: 93vh;
     // }

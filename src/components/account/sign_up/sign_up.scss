@@ -25,26 +25,27 @@ $break-mid-desktop: 869px;
     background-attachment: fixed;
     background-size: cover;
     background-position-x: 50%;
+    height: 100%;
 
     .input-field > label {
         color: white;
     }
 
-    @include mobile {
-        height: 93vh;
-    }
+    // @include mobile {
+    //     height: 93vh;
+    // }
 
-    @media screen and (min-width: $break-tablet) {
-        height: 94vh;
-    }
+    // @media screen and (min-width: $break-tablet) {
+    //     height: 94vh;
+    // }
 
-    @media screen and (min-width: $break-mid-desktop) {
-        height: 93vh;
-    }
+    // @media screen and (min-width: $break-mid-desktop) {
+    //     height: 93vh;
+    // }
 
-    @include lg-desktop {
-        height: 94vh;
-    }
+    // @include lg-desktop {
+    //     height: 94vh;
+    // }
 
     @include mobile{
         .signup-logo-container {

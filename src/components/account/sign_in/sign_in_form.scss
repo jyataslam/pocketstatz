@@ -20,10 +20,12 @@ div > img {
 }
 
 .signin-container {
+    height: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(../../../../public/dist/assets/images/bballwallpaper.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position-x: 50%;
+    
 
     .signin-logo-container{
         .signin-logo{
@@ -40,21 +42,21 @@ div > img {
         color: white;
     }
 
-    @include mobile {
-        height: 93vh;
-    }
+    // @include mobile {
+    //     height: 93vh;
+    // }
 
-    @media screen and (min-width: $break-tablet) {
-        height: 94vh;
-    }
+    // @media screen and (min-width: $break-tablet) {
+    //     height: 94vh;
+    // }
 
-    @media screen and (min-width: $break-mid-desktop) {
-        height: 93vh;
-    }
+    // @media screen and (min-width: $break-mid-desktop) {
+    //     height: 93vh;
+    // }
 
-    @include lg-desktop {
-        height: 93vh;
-    }
+    // @include lg-desktop {
+    //     height: 93vh;
+    // }
 
     @include mobile{
         .signin-logo-container {
