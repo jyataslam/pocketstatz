@@ -25,6 +25,7 @@ $break-mid-desktop: 869px;
     background-attachment: fixed;
     background-size: cover;
     background-position-x: 50%;
+    overflow-y: auto;
     height: 100%;
 
     .input-field > label {
