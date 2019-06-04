@@ -51,22 +51,22 @@ div{
     background-attachment: fixed;
     background-size: cover;
     background-position-x: 50%;
+    height: calc(100% - 64px);
+    // @include mobile {
+    //     height: 93vh;
+    // }
 
-    @include mobile {
-        height: 93vh;
-    }
+    // @include tablet {
+    //     height: 93vh;
+    // }
 
-    @include tablet {
-        height: 93vh;
-    }
+    // @include desktop {
+    //     height: 93vh;
+    // }
 
-    @include desktop {
-        height: 93vh;
-    }
-
-    @include lg-desktop {
-        height: 93vh;
-    }
+    // @include lg-desktop {
+    //     height: 93vh;
+    // }
 
     .welcome-text {
         position: relative;
