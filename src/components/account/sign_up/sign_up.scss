@@ -32,22 +32,6 @@ $break-mid-desktop: 869px;
         color: white;
     }
 
-    // @include mobile {
-    //     height: 93vh;
-    // }
-
-    // @media screen and (min-width: $break-tablet) {
-    //     height: 94vh;
-    // }
-
-    // @media screen and (min-width: $break-mid-desktop) {
-    //     height: 93vh;
-    // }
-
-    // @include lg-desktop {
-    //     height: 94vh;
-    // }
-
     @include mobile{
         .signup-logo-container {
             position: relative;

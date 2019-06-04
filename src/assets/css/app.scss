@@ -1,5 +1,6 @@
 $break-med: 601px;
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import "../../assets/css/media_query_mixins";
 
 body {
     font-family: 'Fjalla One', sans-serif;
@@ -8,11 +9,6 @@ body {
     background-attachment: fixed;
     height: 100vh;
     -webkit-overflow-scrolling: touch;
-
-    @media screen and (max-width: 1000px){
-        background-image: none;
-        background-color: #182027;
-    }
 
     #root {
         height: 100vh;
@@ -23,32 +19,24 @@ body {
         width: 60%;
         margin: auto;
     }
+
+    @include tablet{
+        #gutters{
+            width: 100%;
+        }
+    }
+
+    @include mobile{
+        #gutters{
+            width:100%
+        }
+    }
+
 }
 
 .app-wrapper{
     height: 100%;
-
-    // @media screen and (max-width: $break-med){
-    //     height: calc(100% - 56px);
-    // }
-
-    // @media screen and (min-width: $break-med){
-    //     height: 100%
-    // }
 }
-
-// #landing-container{
-//     width: 100%;
-//     margin: 0 auto;
-//     max-width: 1000px;
-//     height: 100%;
-
-    
-
-//     .navbar-fixed {
-//         height: 36px;
-//     }
-// }
 
 .navbar-fixed {
     height: 36px;

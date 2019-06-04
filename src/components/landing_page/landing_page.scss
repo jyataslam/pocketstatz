@@ -53,22 +53,6 @@ div{
     background-position-x: 50%;
     overflow-y: auto;
     height: 100%;
-    // height: calc(100% - 64px);
-    // @include mobile {
-    //     height: 93vh;
-    // }
-
-    // @include tablet {
-    //     height: 93vh;
-    // }
-
-    // @include desktop {
-    //     height: 93vh;
-    // }
-
-    // @include lg-desktop {
-    //     height: 93vh;
-    // }
 
     .welcome-text {
         position: relative;
