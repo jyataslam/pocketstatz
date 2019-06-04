@@ -24,7 +24,7 @@ class App extends Component {
         return (
             <div className="app-wrapper">
                 <Nav />
-                
+                <div id="gutters">
                     <Switch>
                         <Route path="/" exact component={LandingPage} />
                         <Route path="/browse" render={(routingProps) => {
@@ -37,7 +37,7 @@ class App extends Component {
                         <Route path="/about" component={About} />
                         <Route path="/account" component={AccountRoutes} />
                     </Switch>
-                
+                </div>
                 {/* <div className="navbar-fixed hide-on-med-and-up">
                     <NavFooter />
                 </div> */}
