@@ -8,7 +8,7 @@ class DropDown extends Component {
 
         if (selectedTeams.length !== 0){
             return (
-                <button onClick={() => {checkUserLoggedIn()}} style={margin} className="btn btn-small green accent-4 col s12 pulse">Go To My Teams</button>
+                <button onClick={() => {checkUserLoggedIn()}} style={margin} className="btn btn-small green accent-4 col s10 offset-s1 pulse">Go To My Teams</button>
             )
         } else {
             return (

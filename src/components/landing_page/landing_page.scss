@@ -13,7 +13,11 @@ div{
     @include mobile{
         .welcome-header{
             position: relative;
-            top: 3rem;
+            top: 1.5rem;
+        }
+
+        .welcome-logo {
+            max-width: 42%;
         }
     }
 
@@ -60,7 +64,7 @@ div{
         font-size: 3rem;
 
         @include mobile {
-            top: 4.5rem;
+            top: 3.5rem;
             font-size: 2rem;
         }
 
@@ -85,7 +89,7 @@ div{
         margin-right: auto;
         opacity: 0.5;
         position: relative;
-        top: 4rem;
+        top: 3rem;
 
         @media screen and (min-width: $break-tablet) {
             display: none;
@@ -93,7 +97,7 @@ div{
     }
 
     .first-hr {
-        top: 5rem;
+        top: 4rem;
 
         @media screen and (min-width: $break-tablet) {
             display: none;
@@ -105,7 +109,7 @@ div{
         top: 12rem;
 
         @include mobile {
-            top: 5.5rem;
+            top: 4.5rem;
         }
 
         @media screen and (min-width: $break-tablet) {

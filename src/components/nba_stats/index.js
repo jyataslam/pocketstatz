@@ -54,7 +54,7 @@ class GameInfo extends Component {
         if (!gameDetails) {
             return <LoadingScreen />
         }
-
+        
         return(
             
             <div className="stats-wrapper">

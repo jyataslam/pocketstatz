@@ -49,7 +49,7 @@ export default ({ team1, team2, gameDetails }) => {
 
     return (
         <div className="container" id="team-score">
-            <div className="center" id="date">{gameDetails.gameDate}</div>
+            <div className="center col s12" id="date">{gameDetails.gameDate}</div>
             <div className="row" id="teams">
                 <div className="teamName col s6 center">{checkTeamAcronym(team1.teamName)}</div>
                 <div className="teamName col s6 center">{checkTeamAcronym(team2.teamName)}</div>
