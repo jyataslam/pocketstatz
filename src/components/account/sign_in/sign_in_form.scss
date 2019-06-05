@@ -20,10 +20,13 @@ div > img {
 }
 
 .signin-container {
+    height: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(../../../../public/dist/assets/images/bballwallpaper.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position-x: 50%;
+    overflow-y: auto;
+    
 
     .signin-logo-container{
         .signin-logo{
@@ -38,22 +41,6 @@ div > img {
 
     .input-field > label {
         color: white;
-    }
-
-    @include mobile {
-        height: 93vh;
-    }
-
-    @media screen and (min-width: $break-tablet) {
-        height: 94vh;
-    }
-
-    @media screen and (min-width: $break-mid-desktop) {
-        height: 93vh;
-    }
-
-    @include lg-desktop {
-        height: 93vh;
     }
 
     @include mobile{
@@ -83,7 +70,7 @@ div > img {
     @media screen and (min-width: $break-mid-desktop){
         .signin-logo-container {
             position: relative;
-            top: 4rem; 
+            top: 6rem; 
 
             .signin-logo {
                 max-width: 60%;
@@ -115,7 +102,7 @@ div > img {
         }
 
         @media screen and (min-width: $break-mid-desktop){
-            top: 7rem;
+            top: 10rem;
         }
 
         .login-button {
@@ -132,17 +119,19 @@ div > img {
 }
 
 .error-text {
-    font-size: 1rem;
+    font-size: 0.6rem;
     color: red;
     position: relative;
     bottom: 45px;
 
     @media screen and (min-width: $break-tablet){
         bottom: 32px;
+        font-size: 1rem;
     }
 
     @media screen and (min-width: $break-mid-desktop){
         bottom: 2rem;
+        font-size: 1rem;
     }
 }
 

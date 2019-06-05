@@ -80,11 +80,12 @@
 }
 
 ul{
+  height: 100%;
   margin: 0;
 }
 .team-list-container{
   background-color: #182027;
-  height: 93vh;
+  height: 100%;
   background-image: url('/dist/assets/images/crowd.png');
   background-repeat:no-repeat;
   background-size:contain;
@@ -93,6 +94,9 @@ ul{
   padding-top: 1rem;
 }
 
+#teams-collection{
+  width: 100%;
+}
 .custom-class-2 {
   border-radius: 3px;
 }

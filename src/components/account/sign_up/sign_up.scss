@@ -14,6 +14,10 @@ $break-mid-desktop: 869px;
 .red-text.text-darken-2 {
     margin: 0;
     position: absolute;
+
+    @media screen and (max-width: $break-mobile) {
+        font-size: 0.6rem;
+    }
 }
 
 .signup-container {
@@ -21,31 +25,17 @@ $break-mid-desktop: 869px;
     background-attachment: fixed;
     background-size: cover;
     background-position-x: 50%;
+    overflow-y: auto;
+    height: 100%;
 
     .input-field > label {
         color: white;
     }
 
-    @include mobile {
-        height: 93vh;
-    }
-
-    @media screen and (min-width: $break-tablet) {
-        height: 94vh;
-    }
-
-    @media screen and (min-width: $break-mid-desktop) {
-        height: 93vh;
-    }
-
-    @include lg-desktop {
-        height: 94vh;
-    }
-
     @include mobile{
         .signup-logo-container {
             position: relative;
-            top: 4rem;
+            top: 1rem;
             height: 180px;
 
             .signup-logo {
@@ -79,7 +69,7 @@ $break-mid-desktop: 869px;
 
     .signup-text {
         position: relative;
-        top: 6rem;
+        top: 1rem;
         font-size: 2rem;
 
         @media screen and (min-width: $break-tablet) {
@@ -94,7 +84,7 @@ $break-mid-desktop: 869px;
 
     .signup-form {
         position: relative;
-        top: 6rem;
+        top: 1rem;
 
         @media screen and (min-width: $break-tablet){
             top: 8rem;

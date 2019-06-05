@@ -19,9 +19,9 @@ $navHeaderFont: 'Passion One', sans-serif;
     .header-text {
         margin: 0;
         font-size: 2.3rem;
-        font-weight: 700;
+        font-weight: 550;
         color: white;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         font-family: $navHeaderFont;
 
         @media screen and (max-width: 414px) {

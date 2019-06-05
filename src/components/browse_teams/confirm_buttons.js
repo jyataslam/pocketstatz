@@ -12,7 +12,7 @@ class DropDown extends Component {
             )
         } else {
             return (
-                <button onClick={() => {checkUserLoggedIn()}} style={margin} className="btn btn-small red lighten-3 accent-4 col s12">Select Your Teams</button>
+                <button onClick={() => {checkUserLoggedIn()}} style={margin} className="btn btn-small red lighten-3 accent-4 offset-s1 col s10">Select Your Teams</button>
             )
         }
     }

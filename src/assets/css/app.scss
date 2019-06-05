@@ -1,47 +1,41 @@
 $break-med: 601px;
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import "../../assets/css/media_query_mixins";
 
 body {
     font-family: 'Fjalla One', sans-serif;
     margin: 0 auto;
-    background-color: white;
-    background-image: url('/dist/assets/images/background.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(52, 54, 78, 1));
+    background-attachment: fixed;
     height: 100vh;
     -webkit-overflow-scrolling: touch;
-
-    @media screen and (max-width: 1000px){
-        background-image: none;
-        background-color: #182027;
-    }
 
     #root {
         height: 100vh;
     }
+
+    #gutters{
+        height: 100%;
+        width: 60%;
+        margin: auto;
+    }
+
+    @include tablet{
+        #gutters{
+            width: 100%;
+        }
+    }
+
+    @include mobile{
+        #gutters{
+            width:100%
+        }
+    }
+
 }
 
 .app-wrapper{
-    height: calc(100% - 64px);
-
-    @media screen and (max-width: $break-med){
-        height: calc(100% - 56px);
-    }
-
-    @media screen and (min-width: $break-med){
-        height: 100%
-    }
-}
-
-#landing-container{
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1000px;
-    height: calc(100% - 63px);
-
-    
-
-    .navbar-fixed {
-        height: 36px;
-    }
+    height: 100%;
 }
 
 .navbar-fixed {

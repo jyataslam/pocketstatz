@@ -24,7 +24,7 @@ class App extends Component {
         return (
             <div className="app-wrapper">
                 <Nav />
-                <div id="landing-container">
+                <div id="gutters">
                     <Switch>
                         <Route path="/" exact component={LandingPage} />
                         <Route path="/browse" render={(routingProps) => {

@@ -1,15 +1,15 @@
 .loading-wrapper-container {
     background-image: none;
     background-color: #182027;
-    height: 93vh;
+    height: 100%;
 
     @media screen and (min-width: 600px){
-        height: 93vh;
+        height: 100%;
     }
 
     .loading-image-container {
         display: flex;
-        height: 80vh;
+        height: 100%;
 
         .loading-image {
             margin: auto;
