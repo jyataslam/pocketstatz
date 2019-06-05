@@ -152,7 +152,7 @@ class TeamList extends Component {
 
             return (
                 <div id="teams" className="team-list row">
-                    <div className="container row">
+                    <div id="teams-collection" className="container row">
                         <div>
                             <ToastContainer className="toast-container" />
                         </div>
