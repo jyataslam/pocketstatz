@@ -1,0 +1,19 @@
+.loading-wrapper-container {
+    background-image: none;
+    background-color: #182027;
+    height: 100%;
+
+    @media screen and (min-width: 600px){
+        height: 100%;
+    }
+
+    .loading-image-container {
+        display: flex;
+        height: 100%;
+
+        .loading-image {
+            margin: auto;
+        }
+    }
+
+}

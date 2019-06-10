@@ -1,0 +1,178 @@
+{
+    "success": true,
+    "gameDetails": {
+        "gameDate": "April 25, 2019",
+        "gameStatus": "COMPLETED",
+        "currentPeriod": null,
+        "periodTimeRemaining": null,
+        "currentIntermission": null
+    },
+    "homeTeam": {
+        "teamName": "Sharks",
+        "teamScore": 3,
+		"teamPlayers": {
+            "forwards": {
+                "player1": {
+                    "name": "Michael Jordan",
+                    "position": "C",
+                    "goals": 100,
+                    "assists": 18,
+                    "shots": 21,
+                    "shotPercentage": 40
+                },
+                "player2": {
+                    "name": "Michael Jordan",
+                    "position": "LW",
+                    "goals": 100,
+                    "assists": 18,
+                    "shots": 21,
+                    "shotPercentage": 40
+                },
+                "player3": {
+                    "name": "Michael Jordan",
+                    "position": "RW",
+                    "goals": 100,
+                    "assists": 18,
+                    "shots": 21,
+                    "shotPercentage": 40
+                }
+            },
+            "defensemen": {
+                "player1": {
+                    "name": "Michael Jordan",
+                    "position": "D",
+                    "goals": 100,
+                    "assists": 18,
+                    "blockedShots": 21,
+                    "hits": 40
+                },
+                "player2": {
+                    "name": "Michael Jordan",
+                    "position": "D",
+                    "goals": 100,
+                    "assists": 18,
+                    "blockedShots": 21,
+                    "hits": 40
+                },
+                "player3": {
+                    "name": "Michael Jordan",
+                    "position": "D",
+                    "goals": 100,
+                    "assists": 18,
+                    "blockedShots": 21,
+                    "hits": 40
+                }
+            },
+            "goalies": {
+                "player1": {
+                    "name": "Michael Jordan",
+                    "position": "G",
+                    "shotsAgainst": 100,
+                    "goalsAgainst": 18,
+                    "saves": 21,
+                    "savePercentage": 40
+                },
+                "player2": {
+                    "name": "Michael Jordan",
+                    "position": "G",
+                    "shotsAgainst": 100,
+                    "goalsAgainst": 18,
+                    "saves": 21,
+                    "savePercentage": 40
+                },
+                "player3": {
+                    "name": "Michael Jordan",
+                    "position": "G",
+                    "shotsAgainst": 100,
+                    "goalsAgainst": 18,
+                    "saves": 21,
+                    "savePercentage": 40
+                }
+            }
+		}
+    },
+    "awayTeam": {
+        "teamName": "Golden Knights",
+        "teamScore": 2,
+		"teamPlayers": {
+            "forwards": {
+                "player1": {
+                    "name": "Michael Jordan",
+                    "position": "C",
+                    "goals": 100,
+                    "assists": 18,
+                    "shots": 21,
+                    "shotPercentage": 40
+                },
+                "player2": {
+                    "name": "Michael Jordan",
+                    "position": "LW",
+                    "goals": 100,
+                    "assists": 18,
+                    "shots": 21,
+                    "shotPercentage": 40
+                },
+                "player3": {
+                    "name": "Michael Jordan",
+                    "position": "RW",
+                    "goals": 100,
+                    "assists": 18,
+                    "shots": 21,
+                    "shotPercentage": 40
+                }
+            },
+            "defensemen": {
+                "player1": {
+                    "name": "Michael Jordan",
+                    "position": "D",
+                    "goals": 100,
+                    "assists": 18,
+                    "blockedShots": 21,
+                    "hits": 40
+                },
+                "player2": {
+                    "name": "Michael Jordan",
+                    "position": "D",
+                    "goals": 100,
+                    "assists": 18,
+                    "blockedShots": 21,
+                    "hits": 40
+                },
+                "player3": {
+                    "name": "Michael Jordan",
+                    "position": "D",
+                    "goals": 100,
+                    "assists": 18,
+                    "blockedShots": 21,
+                    "hits": 40
+                }
+            },
+            "goalies": {
+                "player1": {
+                    "name": "Michael Jordan",
+                    "position": "G",
+                    "shotsAgainst": 100,
+                    "goalsAgainst": 18,
+                    "saves": 21,
+                    "savePercentage": 40
+                },
+                "player2": {
+                    "name": "Michael Jordan",
+                    "position": "G",
+                    "shotsAgainst": 100,
+                    "goalsAgainst": 18,
+                    "saves": 21,
+                    "savePercentage": 40
+                },
+                "player3": {
+                    "name": "Michael Jordan",
+                    "position": "G",
+                    "shotsAgainst": 100,
+                    "goalsAgainst": 18,
+                    "saves": 21,
+                    "savePercentage": 40
+                }
+            }
+		}
+    }
+}

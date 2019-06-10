@@ -1,0 +1,9 @@
+{
+	"success": true,
+	"player_info": {
+		"u_t_id": 1,
+		"team_id": 2,
+		"player_name": "Robert Smith",
+		"display_name": "Killer"
+	}
+}

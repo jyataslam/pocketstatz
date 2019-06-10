@@ -1,0 +1,102 @@
+@import "../../assets/css/media_query_mixins";
+
+#empty-homepage-container{
+  background-color: #182027;
+  height: 100%;
+}
+.link-container {
+  justify-content: center;
+  height: 68vh;
+
+  #symbol {
+    font-size: 16rem;
+    opacity: 0.4;
+  }
+}
+
+.main-text {
+  opacity: 0.4;
+  text-align: center;
+}
+
+.rc-swipeout {
+  position: relative;
+}
+
+.rc-swipeout-content {
+  position: relative;
+}
+
+.rc-swipeout-cover {
+  position: absolute;
+  z-index: 2;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: none;
+}
+
+.rc-swipeout .rc-swipeout-content,
+.rc-swipeout .rc-swipeout-actions {
+  transition: all 250ms;
+}
+
+.rc-swipeout-swiping .rc-swipeout-content {
+  transition: none;
+}
+
+.rc-swipeout-actions {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.rc-swipeout-actions-left {
+  left: 0;
+}
+
+.rc-swipeout-actions-right {
+  right: 5vw;
+}
+
+.rc-swipeout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.rc-swipeout-btn-text {
+  padding: 0 12px;
+}
+
+.delete-button {
+  float: right;
+}
+
+ul{
+  height: 100%;
+  margin: 0;
+}
+.team-list-container{
+  background-color: #182027;
+  height: 100%;
+  background-image: url('/dist/assets/images/crowd.png');
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position: bottom;
+  overflow-y:scroll;
+  padding-top: 1rem;
+}
+
+#teams-collection{
+  width: 100%;
+}
+.custom-class-2 {
+  border-radius: 3px;
+}

@@ -1,0 +1,185 @@
+{
+    "success": true,
+    "teams": [
+        {
+            "id": 1,
+            "team_full_name": "Atlanta Hawks",
+            "league_name": "NBA",
+            "api_key": "ATL"
+        },
+        {
+            "id": 2,
+            "team_full_name": "Boston Celtics",
+            "league_name": "NBA",
+            "api_key": "BOS"
+        },
+        {
+            "id": 3,
+            "team_full_name": "Brooklyn Nets",
+            "league_name": "NBA",
+            "api_key": "BRO"
+        },
+        {
+            "id": 4,
+            "team_full_name": "Charlotte Hornets",
+            "league_name": "NBA",
+            "api_key": "CHA"
+        },
+        {
+            "id": 5,
+            "team_full_name": "Chicago Bulls",
+            "league_name": "NBA",
+            "api_key": "CHI"
+        },
+        {
+            "id": 6,
+            "team_full_name": "Cleveland Cavaliers",
+            "league_name": "NBA",
+            "api_key": "CLE"
+        },
+        {
+            "id": 7,
+            "team_full_name": "Dallas Mavericks",
+            "league_name": "NBA",
+            "api_key": "DAL"
+        },
+        {
+            "id": 8,
+            "team_full_name": "Denver Nuggets",
+            "league_name": "NBA",
+            "api_key": "DEN"
+        },
+        {
+            "id": 9,
+            "team_full_name": "Detroit Pistons",
+            "league_name": "NBA",
+            "api_key": "DET"
+        },
+        {
+            "id": 10,
+            "team_full_name": "Golden State Warriors",
+            "league_name": "NBA",
+            "api_key": "GWS"
+        },
+        {
+            "id": 11,
+            "team_full_name": "Houston Rockets",
+            "league_name": "NBA",
+            "api_key": "HOU"
+        },
+        {
+            "id": 12,
+            "team_full_name": "Indiana Pacers",
+            "league_name": "NBA",
+            "api_key": "IND"
+        },
+        {
+            "id": 13,
+            "team_full_name": "LA Clippers",
+            "league_name": "NBA",
+            "api_key": "LAC"
+        },
+        {
+            "id": 14,
+            "team_full_name": "Los Angeles Lakers",
+            "league_name": "NBA",
+            "api_key": "LAL"
+        },
+        {
+            "id": 15,
+            "team_full_name": "Memphis Grizzlies",
+            "league_name": "NBA",
+            "api_key": "MEM"
+        },
+        {
+            "id": 16,
+            "team_full_name": "Miami Heat",
+            "league_name": "NBA",
+            "api_key": "MIA"
+        },
+        {
+            "id": 17,
+            "team_full_name": "Milwaukee Bucks",
+            "league_name": "NBA",
+            "api_key": "MIL"
+        },
+        {
+            "id": 18,
+            "team_full_name": "Minnesota Timberwolves",
+            "league_name": "NBA",
+            "api_key": "MIN"
+        },
+        {
+            "id": 19,
+            "team_full_name": "New Orleans Pelicans",
+            "league_name": "NBA",
+            "api_key": "NOP"
+        },
+        {
+            "id": 20,
+            "team_full_name": "New York Knicks",
+            "league_name": "NBA",
+            "api_key": "NYK"
+        },
+        {
+            "id": 21,
+            "team_full_name": "Oklahoma City Thunder",
+            "league_name": "NBA",
+            "api_key": "OKL"
+        },
+        {
+            "id": 22,
+            "team_full_name": "Orlando Magic",
+            "league_name": "NBA",
+            "api_key": "ORL"
+        },
+        {
+            "id": 23,
+            "team_full_name": "Philadelphia 76ers",
+            "league_name": "NBA",
+            "api_key": "PHI"
+        },
+        {
+            "id": 24,
+            "team_full_name": "Phoenix Suns",
+            "league_name": "NBA",
+            "api_key": "PHX"
+        },
+        {
+            "id": 25,
+            "team_full_name": "Portland Trail Blazers",
+            "league_name": "NBA",
+            "api_key": "POR"
+        },
+        {
+            "id": 26,
+            "team_full_name": "Sacramento Kings",
+            "league_name": "NBA",
+            "api_key": "SAC"
+        },
+        {
+            "id": 27,
+            "team_full_name": "San Antonio Spurs",
+            "league_name": "NBA",
+            "api_key": "SAS"
+        },
+        {
+            "id": 28,
+            "team_full_name": "Toronto Raptors",
+            "league_name": "NBA",
+            "api_key": "TOR"
+        },
+        {
+            "id": 29,
+            "team_full_name": "Utah Jazz",
+            "league_name": "NBA",
+            "api_key": "UTA"
+        },
+        {
+            "id": 50,
+            "team_full_name": "Washington Wizards",
+            "league_name": "NBA",
+            "api_key": "WAS"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "success": true,
+    "homepage_items": [
+        {
+            "team_id": 2,
+            "team_full_name": "Los Angeles Lakers",
+            "team_name": "Lakers",
+            "team_code": "LAL",
+            "logo": "images/los-angeles-lakers.png",
+            "colors": "",
+            "league_name": "NBA"
+        },
+        {
+            "team_id": 1,
+            "team_full_name": "Golden State Warriors",
+            "team_name": "Warriors",
+            "team_code": "GSW",
+            "logo": "images/golden-state-warriors.png",
+            "colors": "",
+            "league_name": "NBA"
+        }
+    ]
+}
+

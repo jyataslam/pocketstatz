@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "../../../assets/css/media_query_mixins";
+
+$scoreFont: 'Roboto', sans-serif;
+$break-med: 600px;
+
+.browse {
+    overflow-y: auto;
+}
+
+#stats-container {
+    // margin-bottom: 36px;
+    width: 100%;
+
+    @media screen and (min-width: $break-med){
+        // margin-bottom: 11px;
+    }
+
+    .nhl-stats {
+        color: white;
+        font-family: $scoreFont;
+
+        #stats-title {
+            font-size: 1em;
+            margin-top: 0px;
+            width: 100%;
+            background-color:rgba(69, 134, 199, 0.3);
+        }
+    
+        .player-head-width {
+            width: 30vw;
+        }
+    
+        th{
+            font-size: 1em;
+            font-weight: 900;
+        }
+    
+        td{
+            font-size: .8em;
+        }
+    
+        tbody {
+            // display: block;
+            // overflow: auto;
+        
+            tr {
+                td:first-child {
+                    width: 30vw;
+                }
+            }
+        }
+        
+        thead, tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+        
+        thead {
+            width: calc( 100% - 1em )
+        }
+        
+        table {
+            width:100%;
+            // display: block;
+            // overflow: auto;
+            height: 60vh;
+
+            @media screen and (min-width: $break-med){
+                height: 70vh;
+            }
+        }
+    }
+}
+
+
+

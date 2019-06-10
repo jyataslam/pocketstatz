@@ -1,0 +1,14 @@
+{
+	"success": true,
+	"leagues": [{
+		"id": 1,
+		"league_name": "National Basketball Association",
+		"short_name": "NBA",
+		"mid": "nba"
+	}, {
+		"id": 2,
+		"league_name": "Overwatch",
+		"short_name": "Overwatch",
+		"mid": "overwatch"
+	}]
+}

@@ -1,0 +1,9 @@
+{
+	"success": true,
+	"player_stats": {
+		"id": 1,
+		"stat_name": "rebounds",
+		"stat_value": 21620,
+		"player_id": 1
+	}
+}

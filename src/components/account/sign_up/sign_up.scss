@@ -1,0 +1,108 @@
+@import "../../../assets/css/media_query_mixins";
+$break-mobile: 600px;
+$break-tablet: 601px;
+$break-mid-desktop: 869px;
+
+#passwordconfirm {
+    color: lightgray;
+}
+
+.input-field {
+    margin: 0;
+}
+
+.red-text.text-darken-2 {
+    margin: 0;
+    position: absolute;
+
+    @media screen and (max-width: $break-mobile) {
+        font-size: 0.6rem;
+    }
+}
+
+.signup-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(../../../../public/dist/assets/images/bballwallpaper.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x: 50%;
+    overflow-y: auto;
+    height: 100%;
+
+    .input-field > label {
+        color: white;
+    }
+
+    @include mobile{
+        .signup-logo-container {
+            position: relative;
+            top: 1rem;
+            height: 180px;
+
+            .signup-logo {
+                max-width: 80%;
+            }
+        }
+    }
+
+    @media screen and (min-width: $break-tablet) {
+        .signup-logo-container {
+            position: relative;
+            top: 5rem; 
+            height: 200px;
+
+            .signup-logo {
+                max-width: 71%;
+            }
+        }
+    }
+
+    @media screen and (min-width: $break-mid-desktop){
+        .signup-logo-container {
+            position: relative;
+            top: 3rem; 
+
+            .signup-logo {
+                max-width: 60%;
+            }
+        }
+    }
+
+    .signup-text {
+        position: relative;
+        top: 1rem;
+        font-size: 2rem;
+
+        @media screen and (min-width: $break-tablet) {
+            top: 8rem;
+            font-size: 2.5rem;
+        }
+
+        @media screen and (min-width: $break-mid-desktop) {
+            top: 3rem;
+        }
+    }
+
+    .signup-form {
+        position: relative;
+        top: 1rem;
+
+        @media screen and (min-width: $break-tablet){
+            top: 8rem;
+        }
+
+        @media screen and (min-width: $break-mid-desktop){
+            top: 0rem;
+        }
+    }
+
+    .signup-button {
+        color: white;
+        border-radius: 200px;
+        background-color: #ef6c00;
+    
+        &:hover {
+            background-color:rgb(52, 54, 78);
+            color: white;
+        }
+    }
+}
