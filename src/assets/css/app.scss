@@ -18,6 +18,8 @@ body {
         height: calc(100% - 64px);
         width: 60%;
         margin: auto;
+        position: relative;
+        top: 64px;
     }
 
     @include tablet{
