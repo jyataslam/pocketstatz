@@ -12,9 +12,11 @@ $navHeaderFont: 'Passion One', sans-serif;
 
 .nav-head {
     padding: 0 15px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1;
+    height: 64px;
+    line-height: 64px;
 
     .header-text {
         margin: 0;

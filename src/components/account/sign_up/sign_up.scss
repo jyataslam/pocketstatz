@@ -7,8 +7,8 @@ $break-mid-desktop: 869px;
     color: lightgray;
 }
 
-.input-field {
-    margin: 0;
+div.input-field {
+    margin-bottom: 0;
 }
 
 .red-text.text-darken-2 {
@@ -46,8 +46,6 @@ $break-mid-desktop: 869px;
 
     @media screen and (min-width: $break-tablet) {
         .signup-logo-container {
-            position: relative;
-            top: 5rem; 
             height: 200px;
 
             .signup-logo {
@@ -58,9 +56,6 @@ $break-mid-desktop: 869px;
 
     @media screen and (min-width: $break-mid-desktop){
         .signup-logo-container {
-            position: relative;
-            top: 3rem; 
-
             .signup-logo {
                 max-width: 60%;
             }
@@ -71,24 +66,21 @@ $break-mid-desktop: 869px;
         position: relative;
         top: 1rem;
         font-size: 2rem;
+        margin-top: 15px;
+        margin-bottom: 0;
 
         @media screen and (min-width: $break-tablet) {
-            top: 8rem;
             font-size: 2.5rem;
         }
 
         @media screen and (min-width: $break-mid-desktop) {
-            top: 3rem;
+            top: 0;
         }
     }
 
     .signup-form {
         position: relative;
         top: 1rem;
-
-        @media screen and (min-width: $break-tablet){
-            top: 8rem;
-        }
 
         @media screen and (min-width: $break-mid-desktop){
             top: 0rem;

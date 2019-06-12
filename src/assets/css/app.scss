@@ -15,7 +15,9 @@ body {
     }
 
     #gutters{
-        height: 100%;
+        height: calc(100% - 64px);
+        position: relative;
+        top: 64px;
         width: 60%;
         margin: auto;
     }

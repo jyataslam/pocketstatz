@@ -24,7 +24,6 @@ div{
     @media screen and (min-width: $break-tablet) {
         .welcome-header{
             position: relative;
-            top: 6rem; 
 
             .welcome-logo {
                 max-width: 22%;
@@ -35,7 +34,6 @@ div{
     @media screen and (min-width: $break-mid-desktop){
         .welcome-header{
             position: relative;
-            top: 6rem; 
 
             .welcome-logo {
                 max-width: 25%;
@@ -59,8 +57,6 @@ div{
     height: 100%;
 
     .welcome-text {
-        position: relative;
-        top: 8rem;
         font-size: 3rem;
 
         @include mobile {
@@ -69,18 +65,16 @@ div{
         }
 
         @media screen and (min-width: $break-tablet) {
-            top: 7rem;
             font-size: 2rem;
         }
 
         @media screen and (min-width: $break-mid-desktop) {
-            top: 8rem;
             font-size: 2.5rem;
         }
     }
 
     hr {
-        display: block;
+        display: none;
         overflow: hidden;
         border-style: inset;
         border-width: 1px;
@@ -105,15 +99,8 @@ div{
     }
 
     .landing-buttons {
-        position: relative;
-        top: 12rem;
-
         @include mobile {
             top: 4.5rem;
-        }
-
-        @media screen and (min-width: $break-tablet) {
-            top: 8rem;
         }
 
         .signup-buttons {
