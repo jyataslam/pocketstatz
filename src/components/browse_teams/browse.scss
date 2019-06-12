@@ -54,6 +54,7 @@ img {
         padding: 5px;
         background-color: white;
         display: flex;
+        cursor: pointer;
         
         @media screen and (min-width: $break-large) {
             width: 150px;
