@@ -103,8 +103,15 @@ ul{
 
 // MODAL
 
-.modal-content{
-  height: 500px;
-  width: 500px;
-  background-color: hotpink;
+.delete-modal{
+  position: absolute;
+  top: 50px;
+  left: 100px;
+
+  .modal-content{
+    height: 500px;
+    width: 500px;
+    background-color: hotpink;
+  }
 }
+

@@ -15,6 +15,7 @@ class GuestTeamList extends Component {
             userTeams: null,
             isMobile: false,
             isModalOpen: false,
+            deleteTeamId: null
         }
 
         window.addEventListener('resize', this.checkScreenWidth);
@@ -62,9 +63,11 @@ class GuestTeamList extends Component {
         });
     }
 
-    openModal = () => {
+    openModal = (id) => {
+        
         this.setState({
-            isModalOpen: true
+            isModalOpen: true,
+            deleteTeamId: id,
         });
     }
 
@@ -76,7 +79,7 @@ class GuestTeamList extends Component {
 
     deleteGuestUserTeam = async (id) => {
         let localStorageArr = JSON.parse("[" + localStorage.getItem("homeTeamIds") + "]");
-        var index = localStorageArr.indexOf(id);
+        var index = localStorageArr.indexOf(this.state.deleteTeamId);
         if (index > -1) {
             localStorageArr.splice(index, 1);
             if (localStorageArr.length === 0){
@@ -97,6 +100,7 @@ class GuestTeamList extends Component {
                 userTeams: response.data.user_teams,
             });
         } 
+        this.closeModal();
     }
 
     goToTeamStats = (teamID, leagueName) => {
@@ -121,7 +125,7 @@ class GuestTeamList extends Component {
                                 {
                                     text: deleteIcon,
                                     // onPress: () => this.deleteGuestUserTeam(team.id),
-                                    onPress: () => this.openModal(),
+                                    onPress: () => this.openModal(team.id),
                                     style: { backgroundColor: 'red', color: 'white' },
                                     className: 'custom-class-2'
                                 }
@@ -139,10 +143,11 @@ class GuestTeamList extends Component {
 
             return (
                 <ul>
-                    <DeleteModal isModalOpen={isModalOpen} closeModal={this.closeModal}/>
+                    
                     <div className="team-list-container">
                         {homepageTeamList}
                     </div>
+                    <DeleteModal isModalOpen={isModalOpen} closeModal={this.closeModal} deleteTeam={this.deleteGuestUserTeam}/>
                     
                 </ul>
             );
