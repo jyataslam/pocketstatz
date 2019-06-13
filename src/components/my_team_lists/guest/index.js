@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import TeamButton from '../team_button/team_button';
 import EmptyHomepage from '../empty_homepage';
+import DeleteModal from '../delete_confirm_modal';
 import axios from 'axios';
 import LoadingScreen from '../../loading_screen';
 import Swipeout from 'rc-swipeout';
@@ -12,7 +13,8 @@ class GuestTeamList extends Component {
 
         this.state = {
             userTeams: null,
-            isMobile: false
+            isMobile: false,
+            isModalOpen: false,
         }
 
         window.addEventListener('resize', this.checkScreenWidth);
@@ -60,6 +62,18 @@ class GuestTeamList extends Component {
         });
     }
 
+    openModal = () => {
+        this.setState({
+            isModalOpen: true
+        });
+    }
+
+    closeModal = () => {
+        this.setState({
+            isModalOpen: false
+        })
+    }
+
     deleteGuestUserTeam = async (id) => {
         let localStorageArr = JSON.parse("[" + localStorage.getItem("homeTeamIds") + "]");
         var index = localStorageArr.indexOf(id);
@@ -94,7 +108,7 @@ class GuestTeamList extends Component {
     }
 
     render() {
-        const { userTeams, isMobile } = this.state;
+        const { userTeams, isMobile, isModalOpen } = this.state;
         const deleteIcon = <i class="material-icons">delete</i>;
         if (!userTeams) {
             return <LoadingScreen />
@@ -106,7 +120,8 @@ class GuestTeamList extends Component {
                             right={[
                                 {
                                     text: deleteIcon,
-                                    onPress: () => this.deleteGuestUserTeam(team.id),
+                                    // onPress: () => this.deleteGuestUserTeam(team.id),
+                                    onPress: () => this.openModal(),
                                     style: { backgroundColor: 'red', color: 'white' },
                                     className: 'custom-class-2'
                                 }
@@ -118,7 +133,7 @@ class GuestTeamList extends Component {
                     )
                 }
                 return (
-                    <TeamButton key={team.id} {...team} chooseTeam={this.goToTeamStats} isMobile={isMobile} deleteTeam={this.deleteGuestUserTeam}/>
+                    <TeamButton key={team.id} {...team} openModal={this.openModal} chooseTeam={this.goToTeamStats} isMobile={isMobile} deleteTeam={this.deleteGuestUserTeam}/>
                 );
             });
 
@@ -127,6 +142,7 @@ class GuestTeamList extends Component {
                     <div className="team-list-container">
                         {homepageTeamList}
                     </div>
+                    <DeleteModal isModalOpen={isModalOpen}/>
                 </ul>
             );
         } 
