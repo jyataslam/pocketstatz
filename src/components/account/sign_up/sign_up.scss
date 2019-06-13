@@ -85,6 +85,11 @@ div.input-field {
         @media screen and (min-width: $break-mid-desktop){
             top: 0rem;
         }
+
+        div.col:nth-child(2) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
     }
 
     .signup-button {
