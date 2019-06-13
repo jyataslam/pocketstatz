@@ -15,7 +15,8 @@ class GuestTeamList extends Component {
             userTeams: null,
             isMobile: false,
             isModalOpen: false,
-            deleteTeamId: null
+            deleteTeamId: null,
+            deleteTeamName: null
         }
 
         window.addEventListener('resize', this.checkScreenWidth);
@@ -63,11 +64,12 @@ class GuestTeamList extends Component {
         });
     }
 
-    openModal = (id) => {
+    openModal = (id, teamName) => {
         
         this.setState({
             isModalOpen: true,
             deleteTeamId: id,
+            deleteTeamName: teamName
         });
     }
 
@@ -112,7 +114,7 @@ class GuestTeamList extends Component {
     }
 
     render() {
-        const { userTeams, isMobile, isModalOpen } = this.state;
+        const { userTeams, isMobile, isModalOpen, deleteTeamName } = this.state;
         const deleteIcon = <i class="material-icons">delete</i>;
         if (!userTeams) {
             return <LoadingScreen />
@@ -147,7 +149,7 @@ class GuestTeamList extends Component {
                     <div className="team-list-container">
                         {homepageTeamList}
                     </div>
-                    <DeleteModal isModalOpen={isModalOpen} closeModal={this.closeModal} deleteTeam={this.deleteGuestUserTeam}/>
+                    <DeleteModal isModalOpen={isModalOpen} closeModal={this.closeModal} deleteTeam={this.deleteGuestUserTeam} teamName={deleteTeamName}/>
                     
                 </ul>
             );
