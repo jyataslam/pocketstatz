@@ -139,10 +139,11 @@ class GuestTeamList extends Component {
 
             return (
                 <ul>
+                    <DeleteModal isModalOpen={isModalOpen} closeModal={this.closeModal}/>
                     <div className="team-list-container">
                         {homepageTeamList}
                     </div>
-                    <DeleteModal isModalOpen={isModalOpen}/>
+                    
                 </ul>
             );
         } 
