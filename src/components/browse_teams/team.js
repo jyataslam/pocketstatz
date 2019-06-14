@@ -3,43 +3,33 @@ import { connect } from 'react-redux';
 import { teamList } from "../../actions";
 
 class Team extends Component {
-    replaceSpaceWithDash = (str) => {
-        let newStr = "";
-
-        for (let i = 0; i < str.length; i++) {
-            if (str[i] === " ") {
-                newStr += "-";
-            }
-            else {
-                newStr = newStr + str[i];
-            }
-        }
-        return newStr.toLowerCase();
-    }
 
     render() {
-        const { image_url, chooseTeam, id, selected } = this.props;
+        const { image_url, chooseTeam, id, selected, have3Teams } = this.props;
+        let isClicked = selected ? "team-item-clicked" : "team-item";
 
-        if (selected) {
+        if(have3Teams){
             return (
                 <Fragment>
                     <div className="team-container col s6 m3" >
-                        <a className="team-item-clicked z-depth-3" onClick={() => { chooseTeam(id) }}>
+                        <a className="team-item-clicked default-cursor z-depth-3">
                             <img className="team-image" src={`/dist/assets/${image_url}`} />
                         </a>
                     </div>
                 </Fragment>
-            )
+            );
         }
-        return (
-            <Fragment>
-                <div className="team-container col s6 m3" >
-                    <a className="team-item z-depth-3" onClick={() => { chooseTeam(id) }}>
-                        <img className="team-image" src={`/dist/assets/${image_url}`} />
-                    </a>
-                </div>
-            </Fragment>
-        )
+        else{
+            return (
+                <Fragment>
+                    <div className="team-container col s6 m3" >
+                        <a className={`${isClicked} z-depth-3`} onClick={() => { chooseTeam(id) }}>
+                            <img className="team-image" src={`/dist/assets/${image_url}`} />
+                        </a>
+                    </div>
+                </Fragment>
+            );
+        }
     }
 }
 
