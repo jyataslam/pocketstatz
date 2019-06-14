@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import LoadingScreen from '../../loading_screen';
 import TeamButton from '../team_button/team_button';
 import EmptyHomepage from '../empty_homepage';
-import DeleteModal from '../delete_confirm_modal';
+import axios from 'axios';
 import Swipeout from 'rc-swipeout';
 import '../my_team_lists.scss';
 import { connect } from 'react-redux';
@@ -15,10 +15,7 @@ class UserTeamList extends Component {
         this.state = {
             isMobile: false,
             checkingScreenWidth: true,
-            userTeams: null,
-            isModalOpen: false,
-            deleteTeamId: null,
-            deleteTeamName: null
+            userTeams: null
         }
 
         window.addEventListener('resize', this.checkScreenWidth);
@@ -38,25 +35,9 @@ class UserTeamList extends Component {
         })
     }
 
-    handleDeleteTeam = async () => {
-        await this.props.deleteUserTeam(this.state.deleteTeamId)
+    handleDeleteTeam = async (id) => {
+        await this.props.deleteUserTeam(id)
         this.props.getUserTeams();
-        this.closeModal();
-    }
-
-    openModal = (id, teamName) => {
-        
-        this.setState({
-            isModalOpen: true,
-            deleteTeamId: id,
-            deleteTeamName: teamName
-        });
-    }
-
-    closeModal = () => {
-        this.setState({
-            isModalOpen: false
-        })
     }
 
     onLoadCheckScreenWidth() {
@@ -78,7 +59,7 @@ class UserTeamList extends Component {
 
     render() {
         const { userTeams } = this.props;
-        const { isMobile, checkingScreenWidth, isModalOpen, deleteTeamName } = this.state;
+        const { isMobile, checkingScreenWidth } = this.state;
         const deleteIcon = <i className="material-icons">delete</i>;
         if (!userTeams || checkingScreenWidth) {
             return <LoadingScreen />
@@ -91,7 +72,9 @@ class UserTeamList extends Component {
                             right={[
                                 {
                                     text: deleteIcon,
-                                    onPress: () => this.openModal(team.team_id),
+                                    onPress: () => {
+                                        this.handleDeleteTeam(team.team_id)
+                                    },
                                     style: { backgroundColor: 'red', color: 'white' },
                                     className: 'custom-class-2'
                                 }
@@ -103,7 +86,7 @@ class UserTeamList extends Component {
                     )
                 }
                 return (
-                    <TeamButton key={team.id} {...team} openModal={this.openModal} chooseTeam={this.goToTeamStats} isMobile={isMobile} deleteTeam={this.handleDeleteTeam} />
+                    <TeamButton key={team.id} {...team} chooseTeam={this.goToTeamStats} isMobile={isMobile} deleteTeam={this.handleDeleteTeam} />
                 );
             });
 
@@ -111,7 +94,6 @@ class UserTeamList extends Component {
                 <ul>
                     <div className="team-list-container">
                         {homepageTeamList}
-                        <DeleteModal isModalOpen={isModalOpen} closeModal={this.closeModal} deleteTeam={this.handleDeleteTeam} teamName={deleteTeamName}/>
                     </div>
                 </ul>
             );
