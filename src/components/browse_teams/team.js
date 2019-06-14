@@ -3,26 +3,10 @@ import { connect } from 'react-redux';
 import { teamList } from "../../actions";
 
 class Team extends Component {
-    // replaceSpaceWithDash = (str) => {
-    //     let newStr = "";
-
-    //     for (let i = 0; i < str.length; i++) {
-    //         if (str[i] === " ") {
-    //             newStr += "-";
-    //         }
-    //         else {
-    //             newStr = newStr + str[i];
-    //         }
-    //     }
-    //     return newStr.toLowerCase();
-    // }
-
-    renderNonClickable = () => {
-        
-    } 
 
     render() {
         const { image_url, chooseTeam, id, selected, have3Teams } = this.props;
+        let isClicked = selected ? "team-item-clicked" : "team-item";
 
         if(have3Teams){
             return (
@@ -33,34 +17,19 @@ class Team extends Component {
                         </a>
                     </div>
                 </Fragment>
-            )
+            );
         }
         else{
-            if (selected) {
-                return (
-                    <Fragment>
-                        <div className="team-container col s6 m3" >
-                            <a className="team-item-clicked z-depth-3" onClick={() => { chooseTeam(id) }}>
-                                <img className="team-image" src={`/dist/assets/${image_url}`} />
-                            </a>
-                        </div>
-                    </Fragment>
-                )
-            }
-            else{
-                return (
-                    <Fragment>
-                        <div className="team-container col s6 m3" >
-                            <a className="team-item z-depth-3" onClick={() => { chooseTeam(id) }}>
-                                <img className="team-image" src={`/dist/assets/${image_url}`} />
-                            </a>
-                        </div>
-                    </Fragment>
-                );
-            }
-            
+            return (
+                <Fragment>
+                    <div className="team-container col s6 m3" >
+                        <a className={`${isClicked} z-depth-3`} onClick={() => { chooseTeam(id) }}>
+                            <img className="team-image" src={`/dist/assets/${image_url}`} />
+                        </a>
+                    </div>
+                </Fragment>
+            );
         }
-        
     }
 }
 
