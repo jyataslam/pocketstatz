@@ -2,7 +2,7 @@
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "https://api.mysportsfeeds.com/v2.1/pull/nba/current/games/".$_GET['latestGameId']."/boxscore.json");
+curl_setopt($ch, CURLOPT_URL, "https://api.mysportsfeeds.com/v2.1/pull/nba/latest/games/".$_GET['latestGameId']."/boxscore.json");
 
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 
@@ -18,7 +18,7 @@ $resp = curl_exec($ch);
 
 if (!$resp && curl_errno($ch) === 0) {
     unset($resp);
-    curl_setopt($ch, CURLOPT_URL, "https://api.mysportsfeeds.com/v2.1/pull/nba/current/games/".$_GET['backupGameId']."/boxscore.json");
+    curl_setopt($ch, CURLOPT_URL, "https://api.mysportsfeeds.com/v2.1/pull/nba/latest/games/".$_GET['backupGameId']."/boxscore.json");
     $resp = curl_exec($ch);
 } elseif (!$resp) {
     die('Error: "' . curl_error($ch) . '" - Code: ' . curl_errno($ch));
