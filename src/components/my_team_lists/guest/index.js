@@ -126,7 +126,6 @@ class GuestTeamList extends Component {
                             right={[
                                 {
                                     text: deleteIcon,
-                                    // onPress: () => this.deleteGuestUserTeam(team.id),
                                     onPress: () => this.openModal(team.id),
                                     style: { backgroundColor: 'red', color: 'white' },
                                     className: 'custom-class-2'
