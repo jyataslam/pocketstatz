@@ -133,6 +133,12 @@ ul{
       width: 35%;
     }
 
+    @include lg-desktop{
+      .confirm-text{
+        padding-top: 3rem;
+      }
+    }
+
     @include desktop{
       .confirm-row{
         margin-top: 35px;
