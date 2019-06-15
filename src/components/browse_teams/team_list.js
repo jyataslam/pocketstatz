@@ -135,6 +135,10 @@ class TeamList extends Component {
         }
     }
 
+    forceGoToMyTeamsGuest = () => {
+        this.props.history.push(`/user-teams`);
+    }
+
     checkStats = (id) => {
         this.props.history.push(`/${this.props.leagueName}/${id}`);
     }
@@ -160,7 +164,7 @@ class TeamList extends Component {
                         <div>
                             <ToastContainer className="toast-container" />
                         </div>
-                        <Button checkUserLoggedIn={this.checkUserLoggedIn} selectedTeams={this.state.selectedTeams}/>
+                        <Button checkUserLoggedIn={this.checkUserLoggedIn} selectedTeams={this.state.selectedTeams} have3Teams ={this.state.have3Teams} goToGuestTeams={this.forceGoToMyTeamsGuest}/>
                         <div style={border}>
                             {teamsList}
                         </div>
