@@ -80,7 +80,7 @@ class Nav extends Component {
             <Fragment>
                 <nav style={headerColor} className="nav-head">
                     <div className="nav-wrapper">
-                        <a href="/"><span className="header-text brand-logo" >Pocket Statz</span></a>
+                        <Link to="/"><span className="header-text brand-logo" >Pocket Statz</span></Link>
                         <a href="#" data-target="sidenav" className="sidenav-trigger">
                             <i className="material-icons">menu</i>
                         </a>

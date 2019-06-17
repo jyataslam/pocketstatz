@@ -60,7 +60,7 @@ class About extends Component {
                         </div>
                     </div>
                     <div className="col s12 m6 team-card">
-                        <img src="/dist/assets/images/about_chris.png"></img><br></br>
+                        <img src="/dist/assets/images/about_chris.jpg"></img><br></br>
                         <h3>Chris</h3>
                         <div>
                             <a href="https://github.com/Christopher-Gustavsson" target="_blank">
@@ -86,7 +86,7 @@ class About extends Component {
                         </div>
                     </div>
                     <div className="col s12 m6 team-card">
-                        <img src="\dist\michelle.png"></img><br></br>
+                        <img src="/dist/assets/images/about_michelle.jpg"></img><br></br>
                         <h3>Michelle</h3>
                         <div>
                             <a href="https://github.com/mrpoole" target="_blank">
