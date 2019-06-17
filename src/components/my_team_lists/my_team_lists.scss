@@ -112,14 +112,20 @@ ul{
   background-color: rgba(0,0,0,.5);
   z-index: 3;
 
+  @keyframes modalOpen{
+    from {opacity: 0}
+    to {opacity: 1}
+  }
   .modal-content{
-    position: relative;
-    top: 30%;
-    height: 20%;
-    width: 30%;
-    margin: 0 auto;
     background-color: #2A2C40;
-    border-radius: 3px;
+    padding: 20px;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.2);
+    border-radius: 2px;
+    max-width: 525px;
+    margin: 0 auto;
+    margin-top: 30vh;
+    animation-name: modalOpen;
+    animation-duration: 0.5s;
 
     .confirm-text{
       padding-top: 1.5rem;
@@ -131,43 +137,6 @@ ul{
     }
     .deny-btn{
       width: 35%;
-    }
-
-    @include lg-desktop{
-      .confirm-text{
-        padding-top: 3rem;
-      }
-    }
-
-    @include desktop{
-      .confirm-row{
-        margin-top: 35px;
-      }
-      .confirm-btn{
-        height: 38px;
-        margin-right: 2rem;
-      }
-      .deny-btn{
-        height: 38px;
-      }
-    }
-
-    @include tablet{
-      height: 40%;
-    }
-      
-    @include mobile{
-      width: 70%;
-      margin-top: 0px;
-
-      .confirm-text {
-        margin-bottom: 13px;
-      }
-
-      .deny-btn{
-        width: 35%;
-
-      }
     }
   }
 }
