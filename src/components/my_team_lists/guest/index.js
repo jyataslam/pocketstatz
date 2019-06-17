@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import TeamButton from '../team_button/team_button';
 import EmptyHomepage from '../empty_homepage';
+import DeleteModal from '../delete_confirm_modal';
 import axios from 'axios';
 import LoadingScreen from '../../loading_screen';
 import Swipeout from 'rc-swipeout';
@@ -12,7 +13,10 @@ class GuestTeamList extends Component {
 
         this.state = {
             userTeams: null,
-            isMobile: false
+            isMobile: false,
+            isModalOpen: false,
+            deleteTeamId: null,
+            deleteTeamName: null
         }
 
         window.addEventListener('resize', this.checkScreenWidth);
@@ -60,9 +64,24 @@ class GuestTeamList extends Component {
         });
     }
 
+    openModal = (id, teamName) => {
+        
+        this.setState({
+            isModalOpen: true,
+            deleteTeamId: id,
+            deleteTeamName: teamName
+        });
+    }
+
+    closeModal = () => {
+        this.setState({
+            isModalOpen: false
+        })
+    }
+
     deleteGuestUserTeam = async (id) => {
         let localStorageArr = JSON.parse("[" + localStorage.getItem("homeTeamIds") + "]");
-        var index = localStorageArr.indexOf(id);
+        var index = localStorageArr.indexOf(this.state.deleteTeamId);
         if (index > -1) {
             localStorageArr.splice(index, 1);
             if (localStorageArr.length === 0){
@@ -83,6 +102,7 @@ class GuestTeamList extends Component {
                 userTeams: response.data.user_teams,
             });
         } 
+        this.closeModal();
     }
 
     goToTeamStats = (teamID, leagueName) => {
@@ -94,7 +114,7 @@ class GuestTeamList extends Component {
     }
 
     render() {
-        const { userTeams, isMobile } = this.state;
+        const { userTeams, isMobile, isModalOpen, deleteTeamName } = this.state;
         const deleteIcon = <i class="material-icons">delete</i>;
         if (!userTeams) {
             return <LoadingScreen />
@@ -106,7 +126,7 @@ class GuestTeamList extends Component {
                             right={[
                                 {
                                     text: deleteIcon,
-                                    onPress: () => this.deleteGuestUserTeam(team.id),
+                                    onPress: () => this.openModal(team.id),
                                     style: { backgroundColor: 'red', color: 'white' },
                                     className: 'custom-class-2'
                                 }
@@ -118,15 +138,18 @@ class GuestTeamList extends Component {
                     )
                 }
                 return (
-                    <TeamButton key={team.id} {...team} chooseTeam={this.goToTeamStats} isMobile={isMobile} deleteTeam={this.deleteGuestUserTeam}/>
+                    <TeamButton key={team.id} {...team} openModal={this.openModal} chooseTeam={this.goToTeamStats} isMobile={isMobile} deleteTeam={this.deleteGuestUserTeam}/>
                 );
             });
 
             return (
                 <ul>
+                    
                     <div className="team-list-container">
                         {homepageTeamList}
                     </div>
+                    <DeleteModal isModalOpen={isModalOpen} closeModal={this.closeModal} deleteTeam={this.deleteGuestUserTeam} teamName={deleteTeamName}/>
+                    
                 </ul>
             );
         } 

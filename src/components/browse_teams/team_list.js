@@ -11,7 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 class TeamList extends Component {
     state = {
         teams: null,
-        selectedTeams: []
+        selectedTeams: [],
+        have3Teams: false
     }
 
     notify = async () => toast.error('Please log in or sign up to add more than three teams to your list.', {
@@ -51,6 +52,9 @@ class TeamList extends Component {
                 let currentHomeTeams = JSON.parse("[" + localStorage.getItem("homeTeamIds") + "]");
                 if (currentHomeTeams.length === 3) {
                     this.alert();
+                    this.setState({
+                        have3Teams: true
+                    });
                 }
             }
         }
@@ -131,6 +135,10 @@ class TeamList extends Component {
         }
     }
 
+    forceGoToMyTeamsGuest = () => {
+        this.props.history.push(`/user-teams`);
+    }
+
     checkStats = (id) => {
         this.props.history.push(`/${this.props.leagueName}/${id}`);
     }
@@ -144,9 +152,9 @@ class TeamList extends Component {
         else {
             const teamsList = this.props.teams[leagueName].map((team) => {
                 if (this.state.selectedTeams.includes(team.id)) {
-                    return <Team key={team.id} {...team} chooseTeam={this.chooseTeam} checkStats={this.checkStats} selected={true} />
+                    return <Team key={team.id} {...team} chooseTeam={this.chooseTeam} checkStats={this.checkStats} selected={true} have3Teams={this.state.have3Teams}/>
                 }
-                return <Team key={team.id} {...team} chooseTeam={this.chooseTeam} checkStats={this.checkStats} />
+                return <Team key={team.id} {...team} chooseTeam={this.chooseTeam} checkStats={this.checkStats} have3Teams={this.state.have3Teams} />
             });
             const border = { "border": "none" };
 
@@ -156,7 +164,7 @@ class TeamList extends Component {
                         <div>
                             <ToastContainer className="toast-container" />
                         </div>
-                        <Button checkUserLoggedIn={this.checkUserLoggedIn} selectedTeams={this.state.selectedTeams}/>
+                        <Button checkUserLoggedIn={this.checkUserLoggedIn} selectedTeams={this.state.selectedTeams} have3Teams ={this.state.have3Teams} goToGuestTeams={this.forceGoToMyTeamsGuest}/>
                         <div style={border}>
                             {teamsList}
                         </div>

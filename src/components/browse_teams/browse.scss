@@ -54,6 +54,7 @@ img {
         padding: 5px;
         background-color: white;
         display: flex;
+        cursor: pointer;
         
         @media screen and (min-width: $break-large) {
             width: 150px;
@@ -63,6 +64,10 @@ img {
         .team-image {
             margin: 0 auto;
         }
+    }
+
+    .default-cursor{
+        cursor: default;
     }
 
     .team-item-clicked {
