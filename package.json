@@ -15,7 +15,7 @@
     "url": "https://github.com/Learning-Fuze/c219_sportsstats"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "material-icons": "^0.3.1",
     "materialize-css": "^1.0.0",
